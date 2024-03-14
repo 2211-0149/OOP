@@ -1,0 +1,21 @@
+public class Inky {
+
+    public Inky(String x) {
+        System.out.println(x);
+    }
+
+    public Inky(String pincky, String blincky, String rincky) {
+        System.out.println(blincky + " " + pincky);
+        System.out.println(pincky + " " + rincky);
+        System.out.println(blincky + " " + pincky + " " + rincky);
+    }
+
+    public static void main(String[] args) {
+        String pincky = "Doncky";
+        Inky Poncky = new Inky(pincky);
+
+        String blincky = "Pincky";
+        String rincky = "moncky";
+        Inky Poncky2 = new Inky(pincky, blincky, rincky);
+    }
+}
