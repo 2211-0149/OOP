@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - User Management</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>User Management</h1>
+        <nav>
+            <a href="admin-products.html">Products</a>
+            <a href="admin-orders.html">Orders</a>
+            <a href="admin-content.html">Content</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Manage Users</h2>
+        <button onclick="addUser()">Add New User</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="user-list">
+                <!-- Users will be dynamically loaded here -->
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        function loadUsers() {
+      
+            let users = [
+                { username: 'user1', email: 'user1@abc.com' },
+                { username: 'user2', email: 'user2@abc1.com' }
+            ];
+
+            let userList = document.getElementById('user-list');
+            users.forEach(user => {
+                userList.innerHTML += `<tr>
+                    <td>${user.username}</td>
+                    <td>${user.email}</td>
+                    <td>
+                        <button onclick="editUser('${user.username}')">Edit</button>
+                        <button onclick="deleteUser('${user.username}')">Delete</button>
+                    </td>
+                </tr>`;
+            });
+        }
+
+        function addUser() {
+            alert('Add new user functionality coming soon!');
+        }
+
+        function editUser(username) {
+            alert('Editing user: ' + username);
+        }
+
+        function deleteUser(username) {
+            alert('Deleting user: ' + username);
+        }
+
+        window.onload = loadUsers;
+    </script>
+</body>
+</html>

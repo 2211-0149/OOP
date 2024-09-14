@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Spice Spectrum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Your Profile</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="cart.html">Cart</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </header>
+
+    <section id="profile">
+        <h2>User Profile</h2>
+        <form id="profile-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" required>
+
+            <button type="submit">Update Profile</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Spice Spectrum. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+
+        let user = {
+            username: "user123",
+            email: "user@abc.com",
+            password: "password123"
+        };
+
+        function loadUserProfile() {
+            document.getElementById('username').value = user.username;
+            document.getElementById('email').value = user.email;
+            document.getElementById('password').value = user.password;
+            document.getElementById('confirm-password').value = user.password;
+        }
+
+        // Handle profile update submission
+        document.getElementById('profile-form').onsubmit = function(event) {
+            event.preventDefault();
+
+            // Get updated values from form
+            let updatedUsername = document.getElementById('username').value;
+            let updatedEmail = document.getElementById('email').value;
+            let updatedPassword = document.getElementById('password').value;
+            let confirmPassword = document.getElementById('confirm-password').value;
+
+            // Check if passwords match
+            if (updatedPassword !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            // Save updated profile data (here, we're just updating the dummy user object)
+            user.username = updatedUsername;
+            user.email = updatedEmail;
+            user.password = updatedPassword;
+
+            alert("Profile updated successfully!");
+        }
+
+        // Load user data on page load
+        window.onload = loadUserProfile;
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Spectrum - Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="checkout.html">Checkout</a>
+        </nav>
+    </header>
+    
+    <section id="cart">
+        <h2>Your Cart Items</h2>
+        <div id="cart-items"></div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Spice Spectrum. All rights reserved.</p>
+    </footer>
+    
+    <script src="scripts.js"></script>
+    <script>loadCart();</script>
+</body>
+</html>

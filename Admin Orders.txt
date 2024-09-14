@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Order Management</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Order Management</h1>
+        <nav>
+            <a href="admin-users.html">Users</a>
+            <a href="admin-products.html">Products</a>
+            <a href="admin-content.html">Content</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Manage Orders</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="order-list">
+                <!-- Orders will be dynamically loaded here -->
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        function loadOrders() {
+            // Dummy data for orders
+            let orders = [
+                { id: '1234', customer: 'user1', status: 'Pending' },
+                { id: '5678', customer: 'user2', status: 'Shipped' }
+            ];
+
+            let orderList = document.getElementById('order-list');
+            orders.forEach(order => {
+      

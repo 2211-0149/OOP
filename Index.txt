@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Spectrum - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Spice Spectrum</h1>
+<img src="   1726237863102  .jpg >
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="login.html">Login</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+    
+    <section id="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product">
+ <img src="  1726237771749.jpg    " alt="Spice 1">
+            <p>Cloves</p>
+            <p>Price: 100g=LKR 350.00</p>
+<img src="1726237676710 .jpg    " alt="Spice 2">
+            <p>Lemmon Grass</p>
+            <p>Price: 100g=LKR 300.00</p>
+<img src="1726237178583 .jpg    " alt="Spice 3">
+            <p>Black Pepar </p>
+            <p>Price: 100g=LKR 400.00</p>
+<img src="1726237134343.jpg    " alt="Spice 4">
+            <p>Cinnamon  </p>
+            <p>Price: 100g=LKR 450.00</p>
+<img src=" 1726237443137.jpg    " alt="Spice 5">
+            <p>Ginger </p>
+            <p>Price: 100g=LKR 350.00</p>
+<img src=" 1726237471797   .jpg    " alt="Spice 6">
+            <p>Curry Leaves  </p>
+            <p>Price: 100g=LKR 150.00</p>
+<img src="     1726237365717   .jpg    " alt="Spice 7">
+            <p>Nutmeg </p>
+            <p>Price: 100g=LKR 600.00</p>
+<img src="    1726237071523   .jpg    " alt="Spice 8">
+            <p>Turmeric  </p>
+            <p>Price: 100g=LKR 300.00</p>
+            <button onclick="addToCart('spice1')">Add to Cart</button>
+        </div>
+        <!-- Add more product cards -->
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Spice Spectrum. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
